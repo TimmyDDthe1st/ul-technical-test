@@ -6,7 +6,7 @@ describe('AlphaCharacterChange', function() {
   it('Should increment alphabet characters by 2', function() {
     var stringChanger = new StringChanger([]);
     var input = "£7eBm";
-    var result = "£7gDo";
+    var result = "£7gDO";
     expect(stringChanger.nextLetter(input)).to.equal(result);
   });
 
@@ -24,10 +24,10 @@ describe('AlphaCharacterChange', function() {
     expect(stringChanger.nextLetter(input)).to.equal(result);
   })
 
-  it('Should make y into a', function() {
+  it('Should make y into A', function() {
     var stringChanger = new StringChanger([]);
     var input = "y";
-    var result = "a";
+    var result = "A";
     expect(stringChanger.nextLetter(input)).to.equal(result);
   })
 
@@ -40,8 +40,15 @@ describe('AlphaCharacterChange', function() {
 
   it('Should capitalize vowels', function() {
     var stringChanger = new StringChanger([]);
-    var input = "aeiou";
+    var input = "ycgms";
     var result = "AEIOU";
+    expect(stringChanger.nextLetter(input)).to.equal(result);
+  })
+
+  it('Should change Znb0y into Bpd0A', function() {
+    var stringChanger = new StringChanger([]);
+    var input = "Znb0y";
+    var result = "Bpd0A";
     expect(stringChanger.nextLetter(input)).to.equal(result);
   })
 });
