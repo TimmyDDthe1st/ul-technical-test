@@ -3,7 +3,7 @@ const expect = chai.expect;
 const StringChanger = require('../classes/string-changer.js');
 
 describe('AlphaCharacterChange', function() {
-  it.only('Should increment alphabet characters by 2', function() {
+  it('Should increment alphabet characters by 2', function() {
     var stringChanger = new StringChanger([]);
     var input = "£7eBm";
     var result = "£7gDo";
@@ -14,6 +14,27 @@ describe('AlphaCharacterChange', function() {
     var stringChanger = new StringChanger([]);
     var input = "z";
     var result = "b";
+    expect(stringChanger.nextLetter(input)).to.equal(result);
+  })
+
+  it('Should make Z into B', function() {
+    var stringChanger = new StringChanger([]);
+    var input = "Z";
+    var result = "B";
+    expect(stringChanger.nextLetter(input)).to.equal(result);
+  })
+
+  it('Should make y into a', function() {
+    var stringChanger = new StringChanger([]);
+    var input = "y";
+    var result = "a";
+    expect(stringChanger.nextLetter(input)).to.equal(result);
+  })
+
+  it('Should make Y into A', function() {
+    var stringChanger = new StringChanger([]);
+    var input = "Y";
+    var result = "A";
     expect(stringChanger.nextLetter(input)).to.equal(result);
   })
 

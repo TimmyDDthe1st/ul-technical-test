@@ -18,7 +18,26 @@ StringChanger.prototype.nextLetter = function (originalString) {
 }
 
 StringChanger.prototype.incrementChar = function (character) {
+    var charCodeB = 98;
+    var charCodeA = 97;
+    if(character == 'z') {
+        // return b
+        return String.fromCharCode(charCodeB)
+    } else if(character == 'Z') {
+        // return B
+        return this.capitalize(String.fromCharCode(charCodeB));
+    } else if(character == 'y') {
+        // return a
+        return String.fromCharCode(charCodeA)
+    } else if(character == 'Y') {
+        // return A
+        return this.capitalize(String.fromCharCode(charCodeA))
+    }
     return String.fromCharCode(character.charCodeAt(0) + 2);
+}
+
+StringChanger.prototype.capitalize = function (character) {
+    return String.fromCharCode(character.charCodeAt(0) - 32);
 }
 
 module.exports = StringChanger;
