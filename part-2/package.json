@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-watch": "./node_modules/mocha/bin/mocha tests --recursive --watch",
     "test": "./node_modules/mocha/bin/mocha tests --recursive"
   },
   "author": "Tim Douglas",

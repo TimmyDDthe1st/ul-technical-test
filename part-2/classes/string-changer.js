@@ -1,12 +1,11 @@
 function StringChanger() {}
 
 StringChanger.prototype.nextLetter = function (originalString) {
-    let fullString = originalString.toLowerCase();
-    let fullStringArray = fullString.split("");
+    let fullStringArray = originalString.split("");
     let newString = [];
 
     fullStringArray.forEach(character => {
-        if(character.match(/[a-z]+/)){
+        if(character.match(/[a-zA-Z]+/)){
             newString.push(this.incrementChar(character))
         } else {
             newString.push(character)
@@ -14,10 +13,8 @@ StringChanger.prototype.nextLetter = function (originalString) {
     });
 
     newString = newString.join("");
-    
-    return newString;
-    
-    //return "£7gDO"
+
+    return newString;    
 }
 
 StringChanger.prototype.incrementChar = function (character) {
