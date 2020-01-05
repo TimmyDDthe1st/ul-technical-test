@@ -1,0 +1,16 @@
+{
+  "name": "ul-technical-test-part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-watch": "./node_modules/mocha/bin/mocha tests --recursive --watch",
+    "test": "./node_modules/mocha/bin/mocha tests --recursive"
+  },
+  "author": "Tim Douglas",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
+}
